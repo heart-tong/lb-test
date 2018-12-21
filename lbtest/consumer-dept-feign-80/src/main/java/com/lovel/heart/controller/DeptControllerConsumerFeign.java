@@ -16,27 +16,17 @@ public class DeptControllerConsumerFeign {
     private DeptClientService service;
 
     @RequestMapping(value = "/consumer/dept/get/{id}")
-
     public Dept get(@PathVariable("id") Long id) {
-
         return this.service.get(id);
-
     }
 
     @RequestMapping(value = "/consumer/dept/list")
-
     public List<Dept> list() {
-
         return this.service.list();
-
     }
 
     @RequestMapping(value = "/consumer/dept/add")
-
     public Object add(Dept dept) {
-
         return this.service.add(dept);
-
     }
-
 }

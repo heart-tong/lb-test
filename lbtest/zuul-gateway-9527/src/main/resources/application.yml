@@ -1,48 +1,26 @@
 server:
-
   port: 9999
 
-
-
 spring:
-
   application:
-
     name: zuul-gateway
 
-
 zuul:
-
-  prefix: /heart
-
-  ignored-services: "*"
-
+  prefix: /heart                       # 统一前缀
+  ignored-services: "*"                # 忽略原访问地址
   routes:
-
-    mydept.serviceId: lb-test-dept
-
-    mydept.path: /lovel/**
+    mydept.serviceId: lb-test-dept     # 在eureka注册的服务id
+    mydept.path: /lovel/**             # 将lovel转向lb-test-dept
 
 eureka:
-
   client:
-
     service-url:
-
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
-
   instance:
-
     instance-id: gateway-9527.com
-
     prefer-ip-address: true
-
 info:
-
   app.name: heart-lbtest
-
   company.name: heart.lovel.com
-
   build.artifactId: $project.artifactId$
-
   build.version: $project.version$

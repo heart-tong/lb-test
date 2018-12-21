@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients(basePackages= {"com.lovel.heart"})
 public class DeptConsumerFeign80App {
-
     public static void main(String[] args) {
         SpringApplication.run(DeptConsumerFeign80App.class, args);
     }

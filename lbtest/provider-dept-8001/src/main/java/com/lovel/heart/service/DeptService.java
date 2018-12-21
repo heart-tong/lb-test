@@ -1,8 +1,8 @@
 package com.lovel.heart.service;
 
-import com.lovel.heart.entities.Dept;
+        import com.lovel.heart.entities.Dept;
 
-import java.util.List;
+        import java.util.List;
 
 public interface DeptService {
 
